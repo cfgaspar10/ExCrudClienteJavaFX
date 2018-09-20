@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClienteController">
+   <children>
+      <TabPane fx:id="tpAbas" layoutX="200.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+        <tabs>
+          <Tab text="Cadastro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="68.0" prefWidth="100.0" text="Nome:" AnchorPane.leftAnchor="20.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="28.0" prefWidth="100.0" text="Cpf:" AnchorPane.leftAnchor="20.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="108.0" prefWidth="100.0" text="Endereço:" AnchorPane.leftAnchor="20.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="148.0" prefWidth="100.0" text="Email:" AnchorPane.leftAnchor="20.0" />
+                        <TextField fx:id="tfCpf" layoutX="146.0" layoutY="23.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="20.0" />
+                        <TextField fx:id="tfNome" layoutX="146.0" layoutY="63.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="20.0" />
+                        <TextField fx:id="tfEndereco" layoutX="146.0" layoutY="103.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="20.0" />
+                        <TextField fx:id="tfEmail" layoutX="146.0" layoutY="143.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="20.0" />
+                        <Button fx:id="btLimpar" layoutX="500.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleLimpar" prefWidth="80.0" text="Limpar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+                        <Button fx:id="btExcluir" layoutX="387.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleExcluir" prefWidth="80.0" text="Excluir" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="120.0" />
+                        <Button fx:id="btAlterar" layoutX="273.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleAlterar" prefWidth="80.0" text="Alterar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="220.0" />
+                        <Button fx:id="btIncluir" layoutX="174.0" layoutY="236.0" mnemonicParsing="false" onAction="#hadleIncluir" prefWidth="80.0" text="Incluir" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="320.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Consulta">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="23.0" layoutY="25.0" text="Nome:" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="25.0" />
+                        <TextField fx:id="tfPesquisar" layoutX="74.0" layoutY="9.0" prefHeight="27.0" prefWidth="406.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="20.0" />
+                        <Button layoutX="511.0" layoutY="9.0" mnemonicParsing="false" onAction="#handlePesquisar" prefWidth="80.0" text="Pesquisar" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                        <TableView fx:id="tvClientes" layoutX="14.0" layoutY="59.0" onMouseClicked="#handleMouseClicked" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+                          <columns>
+                            <TableColumn fx:id="tcIdClientes" editable="false" prefWidth="30.0" text="Id" />
+                            <TableColumn fx:id="tcCpfClientes" editable="false" prefWidth="99.0" text="CPF" />
+                              <TableColumn fx:id="tcNomeClientes" editable="false" prefWidth="161.0" text="Nome" />
+                              <TableColumn fx:id="tcEnderecoClientes" editable="false" prefWidth="130.0" text="Endereço" />
+                              <TableColumn fx:id="tcEmailClientes" editable="false" prefWidth="138.0" text="Email" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="80.0" prefWidth="600.0" text="Cadastro de Cliente" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
